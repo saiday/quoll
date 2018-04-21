@@ -10,13 +10,12 @@ class IndievoxSpider(scrapy.Spider):
     start_urls = ['https://www.indievox.com/event/ticket/']
 
     def parse(self, response):
-        # for event in response.css('div.event-block'):
-        event = response.css('div.event-block')
-        detail = event.css('div.event-data').xpath('a/@href').extract_first()
-        title = event.css('div.event-data').xpath('h5/a/@title').extract_first()
-        image = event.xpath('a/img/@src').extract_first()
-        meta = {'processing_event': Event(title=title, image=image)}
-        yield response.follow(detail, self.parse_detail, meta=meta)
+        for event in response.css('div.event-block'):
+            detail = event.css('div.event-data').xpath('a/@href').extract_first()
+            title = event.css('div.event-data').xpath('h5/a/@title').extract_first()
+            image = event.xpath('a/img/@src').extract_first()
+            meta = {'processing_event': Event(title=title, image=image)}
+            yield response.follow(detail, self.parse_detail, meta=meta)
 
     def parse_detail(self, response):
         event = response.meta['processing_event']
