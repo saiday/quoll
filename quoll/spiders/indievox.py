@@ -1,21 +1,36 @@
 # -*- coding: utf-8 -*-
+import datetime
+
 import scrapy
 
 from quoll.spiders.event import Event
 
 
+def compose_list_url(start_date, offset):
+    return 'https://www.indievox.com/event/get-more-event-date-list?style=poster&content=event_ticket&content_container_id=event-ticket-block&start_date=' + start_date + '&end_date=2030-12-31&key_word=&load_more=1&pagenation_type=full-page-more&pagenation_expand_col=&offset=' + str(offset) + '&length=7'
+
+
 class IndievoxSpider(scrapy.Spider):
     name = 'indievox'
     allowed_domains = ['indievox.com']
-    start_urls = ['https://www.indievox.com/event/ticket/']
+    # start_urls = ['https://www.indievox.com/event/ticket/']
+    today = datetime.date.today()
+    today_formatted = today.strftime('%Y-%m-%d')
+    offset = 0
+    start_urls = [compose_list_url(today_formatted, offset)]
 
     def parse(self, response):
-        for event in response.css('div.event-block'):
-            detail = event.css('div.event-data').xpath('a/@href').extract_first()
-            title = event.css('div.event-data').xpath('h5/a/@title').extract_first()
-            image = event.xpath('a/img/@src').extract_first()
-            meta = {'processing_event': Event(title=title, image=image)}
-            yield response.follow(detail, self.parse_detail, meta=meta)
+        # for event in response.css('div.event-block'):
+        event = response.css('div.event-block')[0]
+        detail = event.css('div.event-data').xpath('a/@href').extract_first()
+        title = event.css('div.event-data').xpath('h5/a/@title').extract_first()
+        image = event.xpath('a/img/@src').extract_first()
+        meta = {'processing_event': Event(title=title, image=image)}
+        yield response.follow(detail, self.parse_detail, meta=meta)
+
+        # if len(response.css('div.event-block')) > 0:
+        #     self.offset += 7
+        #     yield response.follow(compose_list_url(self.today_formatted, self.offset))
 
     def parse_detail(self, response):
         event = response.meta['processing_event']
@@ -34,4 +49,4 @@ class IndievoxSpider(scrapy.Spider):
         unlinked_artists = response.css('tr:nth-child(3) td::text').re('\w{2,}')
         event['artists'] = linked_artists + unlinked_artists
 
-        yield dict(event)
+        yield event
