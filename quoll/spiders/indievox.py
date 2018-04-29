@@ -25,9 +25,11 @@ class IndievoxSpider(scrapy.Spider):
         detail = event.css('div.event-data').xpath('a/@href').extract_first()
         title = event.css('div.event-data').xpath('h5/a/@title').extract_first()
         image = event.xpath('a/img/@src').extract_first()
-        meta = {'processing_event': Event(title=title, image=image)}
+        url = response.urljoin(detail)
+        meta = {'processing_event': Event(title=title, image=image, url=url)}
         yield response.follow(detail, self.parse_detail, meta=meta)
 
+        # infinite scroll
         # if len(response.css('div.event-block')) > 0:
         #     self.offset += 7
         #     yield response.follow(compose_list_url(self.today_formatted, self.offset))

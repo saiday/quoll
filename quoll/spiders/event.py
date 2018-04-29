@@ -4,6 +4,7 @@ import scrapy
 
 class Event(scrapy.Item):
     title = scrapy.Field()
+    url = scrapy.Field()
     image = scrapy.Field()
     body = scrapy.Field()
     date = scrapy.Field()
