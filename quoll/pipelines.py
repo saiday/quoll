@@ -23,36 +23,63 @@ class QuollPipeline(object):
             use_unicode=True)
         self.cursor = self.connect.cursor()
 
-    def process_item(self, item, spider):
+    def insert(self, query, args=None):
         try:
-            query = """select * from event where url = %s"""
-            self.cursor.execute(query, item['url'])
-            exist = self.cursor.fetchone()
-            if exist:
-                self.cursor.execute("""update event set title = %s, url = %s, image = %s, body = %s, date = %s, time = %s, price = %s""",
-                                    (item['title'],
-                                     item['url'],
-                                     item['image'],
-                                     item['body'],
-                                     item['date'],
-                                     item['time'],
-                                     item['price']))
-            else:
-                self.cursor.execute("""insert into event(title, url, image, body, date, time, price) value (%s, %s, %s, %s, %s, %s, %s)""",
-                                    (item['title'],
-                                     item['url'],
-                                     item['image'],
-                                     item['body'],
-                                     item['date'],
-                                     item['time'],
-                                     item['price']))
+            self.cursor.execute(query, args)
             self.connect.commit()
-        except Exception as error:
-            # TODO: slack hook
-            print(error)
-            logging.critical(error)
+            return self.cursor.lastrowid
+        except:
+            self.connect.rollback()
+
+    def update(self, query, args=None):
+        try:
+            self.cursor.execute(query, args)
+            self.connect.commit()
+        except:
+            self.connect.rollback()
+
+    def is_exist(self, query, args=None):
+        self.cursor.execute(query, args)
+        return self.cursor.fetchone()
+
+
+    def process_item(self, item, spider):
+        query = """SELECT * FROM event WHERE url = %s"""
+        exist = self.is_exist(query, item['url'])
+        if not exist:
+            venue_exist_query = """SELECT * FROM venue WHERE name = %s"""
+            venue_exist = self.is_exist(venue_exist_query, item['venue'])
+            if not venue_exist:
+                venue_insert_query = """INSERT INTO venue(name, address) VALUES (%s, %s)"""
+                venue_id = self.insert(venue_insert_query, (item['venue'], item['address']))
+            else:
+                venue_id = venue_exist.id
+
+            event_insert_query = """
+                            INSERT INTO event(title, url, image, body, date, time, venue_id, price) VALUES
+                            (%s, %s, %s, %s, %s, %s, %s, %s)
+                            """
+            self.insert(event_insert_query, (
+                        item['title'],
+                        item['url'],
+                        item['image'],
+                        item['body'],
+                        item['date'],
+                        item['time'],
+                        venue_id,
+                        item['price']))
+        else:
+            # would not updating venue
+            event_update_query = """
+                        UPDATE event set title = %s, url = %s, image = %s, body = %s, date = %s, time = %s, price = %s
+            """
+            self.update(event_update_query, (
+                        item['title'],
+                        item['rul'],
+                        item['image'],
+                        item['body'],
+                        item['date'],
+                        item['time'],
+                        item['price']))
 
         return item
-
-    # def if_record_exist
-
