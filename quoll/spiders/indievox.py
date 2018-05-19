@@ -22,7 +22,7 @@ class IndievoxSpider(scrapy.Spider):
     def parse(self, response):
         # for event in response.css('div.event-block'):
         event = response.css('div.event-block')[0]
-        detail = event.css('div.event-data').xpath('a/@href').extract_first()
+        detail = event.xpath('a/@href').extract_first()
         title = event.css('div.event-data').xpath('h5/a/@title').extract_first()
         image = event.xpath('a/img/@src').extract_first()
         url = response.urljoin(detail)

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d2cc6ea-12f2-4865-9dc7-c5bf9058c5a9" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/34f7e028-2965-44ad-8612-2fd57e2c1509.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/34f7e028-2965-44ad-8612-2fd57e2c1509.xml" />
       <change beforePath="$PROJECT_DIR$/quoll/pipelines.py" afterPath="$PROJECT_DIR$/quoll/pipelines.py" />
+      <change beforePath="$PROJECT_DIR$/quoll/spiders/indievox.py" afterPath="$PROJECT_DIR$/quoll/spiders/indievox.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/quoll$entrypoint.coverage" NAME="entrypoint Coverage Results" MODIFIED="1526726082635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/quoll$entrypoint.coverage" NAME="entrypoint Coverage Results" MODIFIED="1526751635806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -46,35 +48,32 @@
         <item name="quoll@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="quoll: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="event: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="artists: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="quoll@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="quoll: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="venue: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="events: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="quoll@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="quoll: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="venues: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="entrypoint.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entrypoint.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="indievox.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quoll/spiders/indievox.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="902">
-              <caret line="48" column="63" lean-forward="false" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+            <state relative-caret-position="238">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,31 +89,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="event.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quoll/spiders/event.py">
+      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quoll/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            <state relative-caret-position="211">
+              <caret line="83" column="47" lean-forward="false" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
+              <folding>
+                <element signature="e#193#207#0" expanded="true" />
+                <marker date="1526751495841" expanded="true" signature="1206:1241" ph="SELECT * FRO... event" />
+                <marker date="1526751495841" expanded="true" signature="1212:1241" ph="select * fro... event" />
+                <marker date="1526751495841" expanded="true" signature="1352:1389" ph="SELECT * fro... venue" />
+                <marker date="1526751495841" expanded="true" signature="1358:1389" ph="select * fro... venue" />
+                <marker date="1526751495841" expanded="true" signature="1539:1588" ph="INSERT INTO venue... " />
+                <marker date="1526751495841" expanded="true" signature="1782:1820" ph="SELECT * FRO... artists" />
+                <marker date="1526751495841" expanded="true" signature="2106:2143" ph="INSERT INTO artists... " />
+                <marker date="1526751495841" expanded="true" signature="2375:2515" ph="INSERT INTO event... " />
+                <marker date="1526751495841" expanded="true" signature="2949:3008" ph="INSERT INTO performers... " />
+                <marker date="1526751495841" expanded="true" signature="3051:3114" ph="SELECT * FRO... performers" />
+                <marker date="1526751495841" expanded="true" signature="3495:3590" ph="UPDATE event... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="defer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Envs/quoll/lib/python3.6/site-packages/twisted/internet/defer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="653" column="52" lean-forward="false" selection-start-line="653" selection-start-column="52" selection-end-line="653" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/quoll/pipelines.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="662">
-              <caret line="74" column="14" lean-forward="false" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
-              <folding>
-                <element signature="e#193#207#0" expanded="true" />
-                <marker date="1526726513698" expanded="true" signature="1206:1240" ph="SELECT * FRO... event" />
-                <marker date="1526726513698" expanded="true" signature="1212:1240" ph="select * fro... event" />
-                <marker date="1526726513698" expanded="true" signature="1351:1386" ph="SELECT * fro... venue" />
-                <marker date="1526726513698" expanded="true" signature="1357:1386" ph="select * fro... venue" />
-                <marker date="1526726513698" expanded="true" signature="1536:1584" ph="INSERT INTO venue... " />
-                <marker date="1526726513698" expanded="true" signature="1807:1946" ph="INSERT INTO event... " />
-                <marker date="1526726513698" expanded="true" signature="2442:2536" ph="UPDATE event... " />
-              </folding>
+      <file leaf-file-name="performers" pinned="false" current-in-tab="false">
+        <entry file="das://table:/9fa1232e/34f7e028-2965-44ad-8612-2fd57e2c1509/quoll.performers">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -129,8 +141,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="venue" pinned="false" current-in-tab="false">
-        <entry file="das://table:/9fa1232e/34f7e028-2965-44ad-8612-2fd57e2c1509/quoll.venue">
+      <file leaf-file-name="console_1.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/34f7e028-2965-44ad-8612-2fd57e2c1509/console_1.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="events" pinned="false" current-in-tab="false">
+        <entry file="das://table:/9fa1232e/34f7e028-2965-44ad-8612-2fd57e2c1509/quoll.events">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -138,12 +160,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console_1.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/34f7e028-2965-44ad-8612-2fd57e2c1509/console_1.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-              <folding />
+      <file leaf-file-name="venues" pinned="false" current-in-tab="false">
+        <entry file="das://table:/9fa1232e/34f7e028-2965-44ad-8612-2fd57e2c1509/quoll.venues">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="artists" pinned="false" current-in-tab="false">
+        <entry file="das://table:/9fa1232e/34f7e028-2965-44ad-8612-2fd57e2c1509/quoll.artists">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -172,7 +202,12 @@
       <find>sqlit</find>
       <find>price</find>
       <find>db</find>
+      <find>exist_query</find>
+      <find>artist</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -184,10 +219,10 @@
         <option value="$PROJECT_DIR$/entrypoint.py" />
         <option value="$PROJECT_DIR$/quoll/settings.py" />
         <option value="$PROJECT_DIR$/quoll/spiders/event.py" />
-        <option value="$PROJECT_DIR$/quoll/spiders/indievox.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/34f7e028-2965-44ad-8612-2fd57e2c1509/console.sql" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/34f7e028-2965-44ad-8612-2fd57e2c1509/console_1.sql" />
+        <option value="$PROJECT_DIR$/quoll/spiders/indievox.py" />
         <option value="$PROJECT_DIR$/quoll/pipelines.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/34f7e028-2965-44ad-8612-2fd57e2c1509/console_1.sql" />
       </list>
     </option>
   </component>
@@ -326,15 +361,16 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4547135" sideWeight="0.5021299" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4547135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4547135" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902032" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994455" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4547135" sideWeight="0.4978701" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25292864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17784877" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994455" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28373381" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -345,7 +381,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="SQL Generator" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994455" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -360,63 +395,78 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/quoll/pipelines.py</url>
-          <line>48</line>
-          <option name="timeStamp" value="11" />
+          <line>86</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/quoll/pipelines.py</url>
+          <line>84</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/quoll/pipelines.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/quoll/pipelines.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>item['body']</expression-string>
+        <expression-string>event_id</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>item['title']</expression-string>
+        <expression-string>artist_id</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>item.title</expression-string>
+        <expression-string>artist_ids</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>item.fields</expression-string>
+        <expression-string>venue_exist</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>venue_exist.id</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>venue_exist[0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>venue_exist.0</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>item['artists']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>item['artist']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
         <expression-string>item</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>type(item)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>len(response.css('div.event-block'))</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>response.css('div.event-block').length</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>response.css('div.event-block')</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>response</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -458,13 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Envs/quoll/lib/python3.6/site-packages/parsel/selector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="121" column="25" lean-forward="false" selection-start-line="121" selection-start-column="25" selection-end-line="121" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -588,6 +631,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/9fa1232e/34f7e028-2965-44ad-8612-2fd57e2c1509/quoll.venue">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/entrypoint.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -596,23 +646,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quoll/spiders/indievox.py">
+    <entry file="file://$USER_HOME$/Envs/quoll/lib/python3.6/site-packages/parsel/selector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="902">
-          <caret line="48" column="63" lean-forward="false" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+        <state relative-caret-position="404">
+          <caret line="67" column="10" lean-forward="false" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/34f7e028-2965-44ad-8612-2fd57e2c1509/console_1.sql">
+    <entry file="file://$USER_HOME$/Envs/quoll/lib/python3.6/site-packages/scrapy/utils/defer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        <state relative-caret-position="508">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/9fa1232e/34f7e028-2965-44ad-8612-2fd57e2c1509/quoll.venue">
+    <entry file="file://$PROJECT_DIR$/quoll/spiders/event.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quoll/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Envs/quoll/lib/python3.6/site-packages/twisted/internet/defer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="653" column="52" lean-forward="false" selection-start-line="653" selection-start-column="52" selection-end-line="653" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quoll/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="83" column="47" lean-forward="false" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
+          <folding>
+            <element signature="e#193#207#0" expanded="true" />
+            <marker date="1526751495841" expanded="true" signature="1206:1241" ph="SELECT * FRO... event" />
+            <marker date="1526751495841" expanded="true" signature="1212:1241" ph="select * fro... event" />
+            <marker date="1526751495841" expanded="true" signature="1352:1389" ph="SELECT * fro... venue" />
+            <marker date="1526751495841" expanded="true" signature="1358:1389" ph="select * fro... venue" />
+            <marker date="1526751495841" expanded="true" signature="1539:1588" ph="INSERT INTO venue... " />
+            <marker date="1526751495841" expanded="true" signature="1782:1820" ph="SELECT * FRO... artists" />
+            <marker date="1526751495841" expanded="true" signature="2106:2143" ph="INSERT INTO artists... " />
+            <marker date="1526751495841" expanded="true" signature="2375:2515" ph="INSERT INTO event... " />
+            <marker date="1526751495841" expanded="true" signature="2949:3008" ph="INSERT INTO performers... " />
+            <marker date="1526751495841" expanded="true" signature="3051:3114" ph="SELECT * FRO... performers" />
+            <marker date="1526751495841" expanded="true" signature="3495:3590" ph="UPDATE event... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/9fa1232e/34f7e028-2965-44ad-8612-2fd57e2c1509/quoll.performers">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -627,36 +722,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quoll/items.py">
+    <entry file="file://$PROJECT_DIR$/quoll/spiders/indievox.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        <state relative-caret-position="238">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quoll/spiders/event.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding />
+    <entry file="das://table:/9fa1232e/34f7e028-2965-44ad-8612-2fd57e2c1509/quoll.artists">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quoll/pipelines.py">
+    <entry file="das://table:/9fa1232e/34f7e028-2965-44ad-8612-2fd57e2c1509/quoll.venues">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/9fa1232e/34f7e028-2965-44ad-8612-2fd57e2c1509/quoll.events">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/34f7e028-2965-44ad-8612-2fd57e2c1509/console_1.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="74" column="14" lean-forward="false" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
-          <folding>
-            <element signature="e#193#207#0" expanded="true" />
-            <marker date="1526726513698" expanded="true" signature="1206:1240" ph="SELECT * FRO... event" />
-            <marker date="1526726513698" expanded="true" signature="1212:1240" ph="select * fro... event" />
-            <marker date="1526726513698" expanded="true" signature="1351:1386" ph="SELECT * fro... venue" />
-            <marker date="1526726513698" expanded="true" signature="1357:1386" ph="select * fro... venue" />
-            <marker date="1526726513698" expanded="true" signature="1536:1584" ph="INSERT INTO venue... " />
-            <marker date="1526726513698" expanded="true" signature="1807:1946" ph="INSERT INTO event... " />
-            <marker date="1526726513698" expanded="true" signature="2442:2536" ph="UPDATE event... " />
-          </folding>
+        <state relative-caret-position="440">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
